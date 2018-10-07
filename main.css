@@ -3,3 +3,8 @@
     font-family: 'Raleway', sans-serif;
     background-color: #78aff4;
 }
+
+header {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.317);
+}
