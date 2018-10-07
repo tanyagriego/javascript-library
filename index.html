@@ -9,12 +9,17 @@
 <body>
 <header role="banner">Tabs for Tunes</header>
 <main role="main">
-    <section role="region" class="search"></section>
+    <section role="region" class="search">
+        <form action="#" class="js-search-form" aria-controls="search_results">                
+            <input type="text" placeholder="i.e. stairway to heaven" aria-label="Search-YouTube" class="js-query">
+            <button type="submit" class="submit">Search</button>
+        </form>
+    </section>
     <section role="region" class="results"></section>
 
 
 
-
+    <section role="region" aria-live="assertive" aria-atomic="true" id="search_results" class="search_results"></section>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
 <script type="text/javascript" src="index.js"></script>
