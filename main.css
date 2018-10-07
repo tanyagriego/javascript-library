@@ -1,3 +1,4 @@
+@import "media.css";
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -7,4 +8,91 @@
 header {
     font-size: 20px;
     color: rgba(0, 0, 0, 0.317);
+}
+
+main {
+    margin-top: 50px;
+}
+
+h2 {
+    margin: 15px 50px;
+    color: #fff
+}
+
+.js-search-form {
+    margin: 0 50px;
+}
+.search-results {
+    display: flex;
+    border-radius: 5px;
+    /*padding: 0 25px;
+    margin: 35px;
+    width: 15%;*/
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+} 
+
+.search-results a {
+    flex: 1;
+    text-align: center;
+}
+
+img {
+    /* display:flex; */
+    margin-right: 15px;
+}
+
+.videoTitle {
+  font-size: 12px;
+  color:#fff;
+  text-decoration: none;  
+}
+
+a:link {
+    color:#fff;
+    text-decoration: none;   
+}
+
+a:visited {
+    color:#B8336A;
+}
+
+::placeholder {
+    color: #fff;
+    justify-content: center;
+    font-size: 16px;
+    padding-left: 10 px;
+
+}
+
+.js-query {
+    border: none;
+    border-bottom: 3px solid ghostwhite;
+    border-radius: 0px;
+    padding: 8px 0;
+    width: 50em;
+    margin-bottom: 10px;
+
+
+    /*border: 1px solid #fff;
+    border-radius: 10%;
+    padding: 1em;
+    width: 15em;
+     justify-content: center; */
+
+}
+
+.submit {
+ border: 1px solid #fff;
+ font-size: 14px;
+ color: #fff;
+ padding: 10px 15px;
+ border-radius: 10%;
+ background: #78aff4;
+ width: 39em;
+}
+
+.submit:hover {
+background: orangered;
 }
