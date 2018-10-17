@@ -1,2 +1,2 @@
-# tabs-for-tunes
-Tabs For Tunes helps users generates guitar tabs and instructional videos based on what song the they want to learn.
+# Javascript Library 
+Javascript Library helps users generate Stackoverflow answers and YouTube videos based on what Javascript term they want to research.
