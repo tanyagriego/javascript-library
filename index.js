@@ -1,18 +1,13 @@
 const YouTube_Search_URL = "https://www.googleapis.com/youtube/v3/search";
-const Songsterr_Search_URL = "http://www.songsterr.com/a/rest/"
+const StackOverflow_Search_URL = "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&site=stackoverflow";
+const YOUTUBE_KEY = "AIzaSyBXjnIeLhAmsGhwe7XQePKmHvCL1J_DEMM";
 
-
-
-
-//This function gets data from the songsterr API
-function getSongsterrData (searchTerm, callback){
+//This function gets data from the StackOverFlow API
+function getStackOverFlowData (searchTerm, callback){
     const settings = {
-        url: Songsterr_Search_URL,
+        url: StackOverflow_Search_URL,
         data: {
-            q: `${searchTerm}`,
-            part: '',
-            key: "",
-            per_page: 3
+            intitle: `javascript ${searchTerm}`,
         },
 
         dataType: 'json',
@@ -27,9 +22,9 @@ function getYouTubeData (searchTerm, callback){
     const settings = {
         url: YouTube_Search_URL,
         data: {
-            q: `guitarlesson${searchTerm}`,
+            q: `javascript ${searchTerm}`,
             part: 'snippet',
-            key: "AIzaSyBXjnIeLhAmsGhwe7XQePKmHvCL1J_DEMM",
+            key: YOUTUBE_KEY,
             per_page: 3
 
         },
@@ -40,15 +35,20 @@ function getYouTubeData (searchTerm, callback){
     $.ajax(settings);
 }
 
-//This function appends the API data to the DOM
-function appendYouTubeApiData (item){
-    return`<div class="search-results"><a href="https://www.youtube.com/watch?v=${item.id.videoId} target="_blank"><img src="${item.snippet.thumbnails.default.url}"></a>
+//This function appends the YouTube API data to the DOM
+function appendYouTubeApiData (item) {
+    return `<div class="search-results"><a href="https://www.youtube.com/watch?v=${item.id.videoId} target="_blank"><img src="${item.snippet.thumbnails.default.url}"></a>
            <a href="https://www.youtube.com/watch?v=${item.id.videoId} class="videoTitle" target="_blank">${item.snippet.title}</a></div>`;
+}
+
+//This function appends the StackOverflow API data to the DOM
+function appendStackOverflowData (item) {
+    return `<div class="stackOverflow-results"><a href="${item.link}" target= "_blank">${item.title}</a></div>`;
 }
 
 //This function does something with the data (callack)
 function displayApiData (data) {
-    console.log(data.items[0]);
+    console.log("YouTube Data " + data.items[0]);
     //loop through array items in object data?
     const results = data.items.map((item) => { 
     //render results to the function that creates html
@@ -56,6 +56,17 @@ function displayApiData (data) {
     //put the html into the search results div
     });
     $('.search_results').html(results);
+}
+
+function displayStackOverflowData (data) {
+    console.log("StackOverflow:" + data);
+    //loop through array items in object data?
+    const results = data.items.map((item) => { 
+    //render results to the function that creates html
+        return appendStackOverflowData (item);
+    //put the html into the search results div
+    });
+    $('.stackOverflowResults').html(results);
 }
 
 //This function allows the user to submit their search results
@@ -66,6 +77,8 @@ function submit () {
         const query = searchTermTextbox.val();
         searchTermTextbox.val("");
         getYouTubeData(query, displayApiData);
+        getStackOverFlowData(query, displayStackOverflowData);
+        
     });
 }
 
