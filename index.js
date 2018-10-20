@@ -2,6 +2,8 @@ const YouTube_Search_URL = "https://www.googleapis.com/youtube/v3/search";
 const StackOverflow_Search_URL = "https://api.stackexchange.com/2.2/search?order=desc&sort=activity&site=stackoverflow";
 const YOUTUBE_KEY = "AIzaSyBXjnIeLhAmsGhwe7XQePKmHvCL1J_DEMM";
 
+$('.search-results').hide();
+
 //This function gets data from the StackOverFlow API
 function getStackOverFlowData (searchTerm, callback){
     const settings = {
@@ -37,13 +39,13 @@ function getYouTubeData (searchTerm, callback){
 
 //This function appends the YouTube API data to the DOM
 function appendYouTubeApiData (item) {
-    return `<div class="search-results"><a href="https://www.youtube.com/watch?v=${item.id.videoId} target="_blank"><img src="${item.snippet.thumbnails.default.url}"></a>
+    return `<div class="youTube-results"><a href="https://www.youtube.com/watch?v=${item.id.videoId} target="_blank"><img src="${item.snippet.thumbnails.default.url}"></a>
            <a href="https://www.youtube.com/watch?v=${item.id.videoId} class="videoTitle" target="_blank">${item.snippet.title}</a></div>`;
 }
 
 //This function appends the StackOverflow API data to the DOM
 function appendStackOverflowData (item) {
-    return `<div class="stackOverflow-results"><a href="${item.link}" target= "_blank">${item.title}</a></div>`;
+    return `<div class="stackOverflow-results"><a href="${item.link}" target= "_blank" class="stackOverflow-answer">${item.title}</a></div>`;
 }
 
 //This function does something with the data (callack)
@@ -55,7 +57,8 @@ function displayApiData (data) {
         return appendYouTubeApiData (item);
     //put the html into the search results div
     });
-    $('.search_results').html(results);
+    $('.youTube_search_results').html(results);
+    $('.search-results').show();
 }
 
 function displayStackOverflowData (data) {
@@ -66,7 +69,7 @@ function displayStackOverflowData (data) {
         return appendStackOverflowData (item);
     //put the html into the search results div
     });
-    $('.stackOverflowResults').html(results);
+    $('.stackOverflow_seach_results').html(results);
 }
 
 //This function allows the user to submit their search results

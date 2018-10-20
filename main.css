@@ -1,4 +1,5 @@
 @import "media.css";
+
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -18,7 +19,7 @@
     right: 0px; 
     bottom: 0px; 
     z-index: -1;
-    opacity: 0.9; 
+    opacity: 0.3; 
 
 }
 
@@ -43,21 +44,6 @@ h2 {
 
 .js-search-form {
     margin: 0 50px;
-}
-.search-results {
-    display: flex;
-    border-radius: 5px;
-    /*padding: 0 25px;
-    margin: 35px;
-    width: 15%;*/
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-} 
-
-.search-results a {
-    flex: 1;
-    text-align: center;
 }
 
 img {
