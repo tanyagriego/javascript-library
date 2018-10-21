@@ -27,7 +27,7 @@ function getYouTubeData (searchTerm, callback){
             q: `javascript ${searchTerm}`,
             part: 'snippet',
             key: YOUTUBE_KEY,
-            per_page: 3
+            maxResults  : 10,
 
         },
         dataType: 'json',
@@ -40,7 +40,7 @@ function getYouTubeData (searchTerm, callback){
 //This function appends the YouTube API data to the DOM
 function appendYouTubeApiData (item) {
     return `<div class="youTube-results"><a href="https://www.youtube.com/watch?v=${item.id.videoId} target="_blank"><img src="${item.snippet.thumbnails.default.url}"></a>
-           <a href="https://www.youtube.com/watch?v=${item.id.videoId} class="videoTitle" target="_blank">${item.snippet.title}</a></div>`;
+           <a href="https://www.youtube.com/watch?v=${item.id.videoId}" class="videoTitle" target="_blank">${item.snippet.title}</a></div>`;
 }
 
 //This function appends the StackOverflow API data to the DOM
@@ -57,7 +57,13 @@ function displayApiData (data) {
         return appendYouTubeApiData (item);
     //put the html into the search results div
     });
-    $('.youTube_search_results').html(results);
+
+    if (results.length) {
+        $('.youTube_search_results').html(results);
+    } else {
+        const noResults =  $(`<div class="no-results">404</div>`);
+        $('.youTube_search_results').html(noResults);
+    }
     $('.search-results').show();
 }
 
@@ -69,7 +75,14 @@ function displayStackOverflowData (data) {
         return appendStackOverflowData (item);
     //put the html into the search results div
     });
-    $('.stackOverflow_seach_results').html(results);
+
+    if (results.length) {
+        $('.stackOverflow_seach_results').html(results);
+    } else {
+        const noResults = $(`<div class="no-results">404</div>`);
+        $('.stackOverflow_seach_results').html(noResults);
+    }
+    $('.search-results').show();
 }
 
 //This function allows the user to submit their search results

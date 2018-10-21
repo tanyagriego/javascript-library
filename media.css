@@ -13,18 +13,23 @@
         /* justify-content: center; */
     }
     
-    .youTube_search_results, .stackOverflow_seach_results {
+    .youtube_container, .stack_overflow_container {
         border: 2px solid black;
         border-radius: 4px;
         padding-left: 1px;
         flex: 50%;
         padding: 15px;
         margin: 10px 15px;
-        background-color: lightgrey;
-        box-shadow: -5px -3px 8px #777777;
+        background-color: #6d95d8;
+        box-shadow: -5px -3px 8px lightgray;
     }
 
+    .youTube-results {
+        display: flex;
+    }
     .stackOverflow-answer {
+        display: inline-block;
         margin-bottom: 10px;
+        color: ghostwhite;
     }
 }
