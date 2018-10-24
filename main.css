@@ -1,5 +1,10 @@
 @import "media.css";
 
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
 section.search {
     background: url(images/background.jpg);
     background-position: center center;
@@ -19,15 +24,6 @@ header {
     position: absolute;
     z-index: 1;
     padding: 10px;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-
-h2 {
-    color: red;
 }
 
 h3 {
@@ -65,16 +61,15 @@ h3 {
 
 header, footer {
     font-size: 20px;
-    color: #fff;
-}
-.howTo {
-    color: #fff;
-    margin: 0 auto; 
-    margin: 0 0px 20px 100px;
-    font-size: 75px;
-    text-shadow: 3px 3px black;
 }
 
+header {
+    color: ghostwhite;
+}
+
+footer {
+    color: black;
+}
 
 h2 {
     margin: 15px 50px;
@@ -83,6 +78,32 @@ h2 {
 
 .js-search-form {
     margin: 0 50px;
+}
+
+.howTo {
+    text-shadow: 3px 3px black;
+    color: ghostwhite;
+}
+
+.youtube_container, .stack_overflow_container {
+    border: 2px solid ghostwhite;
+    border-radius: 4px;
+    padding-left: 1px;
+    flex: 50%;
+    padding: 15px;
+    margin: 10px 15px;
+    background-color: #6d95d8;
+    box-shadow: -5px -3px 8px lightgray;
+}
+
+.youTube-results {
+    display: flex;
+    margin: 15px;
+}
+.stackOverflow-answer {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: ghostwhite;
 }
 
 img {
@@ -102,7 +123,7 @@ a:link {
 }
 
 a:visited {
-    color:#B8336A;
+    color:#FCFF6C;
 }
 
 ::placeholder {
