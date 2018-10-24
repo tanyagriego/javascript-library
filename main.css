@@ -3,7 +3,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
-    /*background-color: #78aff4;*/
 }
 
 h2 {
@@ -39,7 +38,7 @@ h3 {
     right: 0px; 
     bottom: 0px; 
     z-index: -1;
-    opacity: 0.3; 
+    opacity: 0.8; 
 
 }
 
@@ -50,7 +49,9 @@ header, footer {
 .howTo {
     color: #fff;
     margin: 0 auto; 
-    margin: 200px 0px 20px 100px;
+    margin: 260px 0px 20px 100px;
+    font-size: 75px;
+    text-shadow: 3px 3px black;
 }
 
 main {
@@ -85,38 +86,28 @@ a:visited {
 }
 
 ::placeholder {
-    color: #78aff4;
+    color: ghostwhite;
     justify-content: center;
-    font-size: 16px;
+    font-size: 32px;
     padding-left: 10 px;
 }
 
 .js-query {
     border: none;
     border-bottom: 3px solid ghostwhite;
-    border-radius: 5px;
-    padding: 8px 0;
-    width: 50em;
-    margin-bottom: 10px;
+    color: rgb(41, 223, 24);
+    font-size: 45px;
+    background: none;
+    width: 100%;
 }
 
-/* .submit {
-    border: 1px solid #fff;
-    font-size: 14px;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background: #78aff4;
-    width: 39em;
-}
-*/
 .submit:hover {
     background: rgb(41, 223, 24);
 }
 
 .submit {
-    border: 3px solid ghostwhite;
-    padding: 8px 13px;
+    border: 1px solid ghostwhite;
+    padding: 10px 30px;
     color: ghostwhite;
     font-size: 45px;
     font-weight: 400;
@@ -127,7 +118,7 @@ a:visited {
     position: relative;
     left: -3px;
     border-radius: 0;
-}
+    margin-top: 10px;
 }
 
 /*Results Page*/
@@ -145,4 +136,9 @@ a:visited {
 
 .videoTitle {
     color: ghostwhite;
+}
+
+a:hover {
+    background: rgb(41, 223, 24);
+
 }
