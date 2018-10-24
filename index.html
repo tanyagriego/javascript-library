@@ -10,21 +10,29 @@
 <header role="banner">Javascript Library</header>
 <main role="main">
     <section role="region" class="search">
-        <div class="background"></div>
-        <h1 class="howTo">Your questions need answers.</h1>
-        <h4 class= "description">Have a questions about Javascript? Great! Searh the Javascript Library and find answers from StackOverflow along with helpful YouTube videos. </h4> 
+        <h1 class="howTo">Search YouTube and StackOverflow, all at once.</h1>
+        <!-- <h4 class= "description">Have a questions about Javascript? Great! Searh the Javascript Library and find answers from StackOverflow along with helpful YouTube videos. </h4>  -->
         <form action="#" class="js-search-form" aria-controls="search_results">                
             <input type="text" placeholder="i.e. Array" aria-label="Search-YouTube" class="js-query">
-            <!-- <button type="submit" class="submit">Search</button> -->
+            <button type="submit" class="submit">Search</button>
         </form>
     </section>
 
-    <section role="region" aria-live="assertive" aria-atomic="true" id="search_results" class="search_results"></section>
-    <section role="region" aria-live="assertive" aria-atomic="true" id="search_results" class="stackOverflowResults"></section>
+    <section class="search-results" aria-live="assertive" aria-atomic="true">
+        <div class="youtube_container">
+            <h3>Watch</h3>
+            <div class="youTube_search_results"></div>
+        </div>
+
+        <div class="stack_overflow_container">
+            <h3>Read</h3>
+            <div class="stackOverflow_seach_results">
+        </div>
+    </section>
 </main>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>    
 <script type="text/javascript" src="index.js"></script>
 </body>
 
-<footer role="contentinfo">&copy; 2018 Javascript Library</footer>
+<!-- <footer role="contentinfo">&copy; 2018 Javascript Library</footer> -->
 </html>
