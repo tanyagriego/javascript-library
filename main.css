@@ -6,8 +6,24 @@
     /*background-color: #78aff4;*/
 }
 
-.h2 {
+h2 {
     color: red;
+}
+
+h3 {
+    color: ;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-weight: 300;
+    background-color: white;
+    text-shadow: 1px 1px 1px #eaeaea;
+    text-align: right;
+    border-bottom: 1px solid #efefef;
+    border-top: 1px solid #efefef;
+    padding: 5px 20px;
+    background: #fafafa;
+    box-shadow: 0 0 15px #eaeaea;
+    display: block;
 }
 
 .background {
@@ -84,7 +100,7 @@ a:visited {
     margin-bottom: 10px;
 }
 
-.submit {
+/* .submit {
     border: 1px solid #fff;
     font-size: 14px;
     color: #fff;
@@ -93,9 +109,25 @@ a:visited {
     background: #78aff4;
     width: 39em;
 }
-
+*/
 .submit:hover {
-    background: orangered;
+    background: rgb(41, 223, 24);
+}
+
+.submit {
+    border: 3px solid ghostwhite;
+    padding: 8px 13px;
+    color: ghostwhite;
+    font-size: 45px;
+    font-weight: 400;
+    /* letter-spacing: 2px; */
+    background: rgba(255, 255, 255, 0.25);
+    transition: color 0.25s linear;
+    text-shadow: 0 0 3px #555555;
+    position: relative;
+    left: -3px;
+    border-radius: 0;
+}
 }
 
 /*Results Page*/

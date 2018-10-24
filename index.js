@@ -79,7 +79,7 @@ function displayStackOverflowData (data) {
     if (results.length) {
         $('.stackOverflow_seach_results').html(results);
     } else {
-        const noResults = $(`<div class="no-results">404</div>`);
+        const noResults = $(`<div class="no-results">Sorry, there were no results for you search. Please try again. </div>`);
         $('.stackOverflow_seach_results').html(noResults);
     }
     $('.search-results').show();
