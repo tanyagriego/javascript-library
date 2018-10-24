@@ -1,5 +1,26 @@
 @import "media.css";
 
+section.search {
+    background: url(images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 200px 3%;
+    opacity: 0.9px;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
@@ -49,14 +70,11 @@ header, footer {
 .howTo {
     color: #fff;
     margin: 0 auto; 
-    margin: 260px 0px 20px 100px;
+    margin: 0 0px 20px 100px;
     font-size: 75px;
     text-shadow: 3px 3px black;
 }
 
-main {
-    margin-top: 50px;
-}
 
 h2 {
     margin: 15px 50px;
@@ -72,8 +90,10 @@ img {
 }
 
 .videoTitle {
-  font-size: 12px;
-  text-decoration: none;  
+  color: ghostwhite;
+  font-size: 16px;
+  text-decoration: none;
+  padding-top: 5px;  
 }
 
 a:link {
@@ -134,11 +154,7 @@ a:visited {
     margin-bottom: 50px;
 }
 
-.videoTitle {
-    color: ghostwhite;
-}
-
 a:hover {
-    background: rgb(41, 223, 24);
+    color: rgb(41, 223, 24);
 
 }

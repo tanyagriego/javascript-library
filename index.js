@@ -83,6 +83,9 @@ function displayStackOverflowData (data) {
         $('.stackOverflow_seach_results').html(noResults);
     }
     $('.search-results').show();
+    $('html,body').animate({
+        scrollTop: $(".search-results").offset().top
+    }, 2000);
 }
 
 //This function allows the user to submit their search results
@@ -91,10 +94,9 @@ function submit () {
         event.preventDefault();
         const searchTermTextbox = $(event.currentTarget).find('.js-query');
         const query = searchTermTextbox.val();
-        searchTermTextbox.val("");
+        searchTermTextbox.val("").blur();
         getYouTubeData(query, displayApiData);
         getStackOverFlowData(query, displayStackOverflowData);
-        
     });
 }
 

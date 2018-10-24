@@ -7,7 +7,7 @@
         display: flex; 
         border-radius: 5px;
         background-color: white;
-        margin: 330px -11px;
+        margin: 56px 0;
         /*padding: 0 25px;
         margin: 35px;
         width: 15%;*/
@@ -27,6 +27,7 @@
 
     .youTube-results {
         display: flex;
+        margin: 15px;
     }
     .stackOverflow-answer {
         display: inline-block;
