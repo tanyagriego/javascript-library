@@ -7,4 +7,5 @@ Javascript Library is an app that helps users generate Stackoverflow answers and
 Technologies include:
 • Javascript
 • JQuery
-• HTML / CSS
+• HTML
+• CSS
