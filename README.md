@@ -9,3 +9,6 @@ Technologies include:
 • JQuery
 • HTML
 • CSS
+
+# Screenshots
+![](images/Results-screen.png)
