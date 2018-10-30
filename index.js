@@ -48,14 +48,11 @@ function appendStackOverflowData (item) {
     return `<div class="stackOverflow-results"><a href="${item.link}" target= "_blank" class="stackOverflow-answer">${item.title}</a></div>`;
 }
 
-//This function does something with the data (callack)
+//This function displays YouTube data
 function displayApiData (data) {
     console.log("YouTube Data " + data.items[0]);
-    //loop through array items in object data?
     const results = data.items.map((item) => { 
-    //render results to the function that creates html
         return appendYouTubeApiData (item);
-    //put the html into the search results div
     });
 
     if (results.length) {
@@ -67,13 +64,11 @@ function displayApiData (data) {
     $('.search-results').show();
 }
 
+//This function displays StackOverflow data
 function displayStackOverflowData (data) {
     console.log("StackOverflow:" + data);
-    //loop through array items in object data?
     const results = data.items.map((item) => { 
-    //render results to the function that creates html
         return appendStackOverflowData (item);
-    //put the html into the search results div
     });
 
     if (results.length) {
