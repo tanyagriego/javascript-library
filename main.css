@@ -152,7 +152,6 @@ a:visited {
     color: ghostwhite;
     font-size: 45px;
     font-weight: 400;
-    /* letter-spacing: 2px; */
     background: rgba(255, 255, 255, 0.25);
     transition: color 0.25s linear;
     text-shadow: 0 0 3px #555555;
@@ -161,8 +160,6 @@ a:visited {
     border-radius: 0;
     margin-top: 10px;
 }
-
-/*Results Page*/
 
 .tabContainer, .videoContainer {
     background-color: #fff;
