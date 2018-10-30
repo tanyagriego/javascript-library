@@ -11,5 +11,8 @@ Javascript Library is an app that helps users generate Stackoverflow answers and
 • CSS
 
 # Screenshots
+Search Page:
 ![](images/Search-screen.png)
+
+Results Page:
 ![](images/Results-screen.png)
